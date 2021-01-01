@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,94 +9,148 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Triangles</title>
 </head>
+
 <body>
     <nav>
-        <h1>Welcome to the world of Triangles</h1>
+        <h1><svg width="30" height="30">
+                <polygon points="15, 0, 30, 30, 0, 30" fill="black" />
+            </svg> Welcome to the world of Triangles <svg width="30" height="30">
+                <polygon points="15, 0, 30, 30, 0, 30" fill="black" />
+            </svg></h1>
     </nav>
-    <!-- If the angles makes a triangle-->
-    <div>
-        <h3>Enter 3 values and check to see if they can be angles of a triangle</h3>
-        <input id="num-angle1" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of the angle"/>
-        <input id="num-angle2" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of the angle"/>
-        <input id="num-angle3" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of the angle" />
-        <button id="btn-isTriangle" type="button">Check</button>
-        <div class="txt-result"></div>
-    </div>
-    <hr/>
-    <!-- Given 3 angles, guess the type of triangle - acute, right, obtuse angled triangle-->
-    <div>
-        <h3>Given the below 3 angles, choose the type of triangle they would form</h3>
-        <div>
-            First angle: <span class="val-angle"></span>
-            Second angle: <span class="val-angle"></span>
-            Third angle: <span class="val-angle"></span>
+    <section>
+        <h3>Select one of the following:</h3>
+    </section>
+
+    <!-- Images to learn or take a quiz-->
+    <section class="sec-img">
+        <div class="img-container">
+            <img id="learn" class="img" src="images/learn.svg" alt="Learn" />
+            <div class="txt-desc">
+                <button class="btn" type="button">Learn about triangles</button>
+            </div>
         </div>
-        <input type="radio" id="notTriangle" name="triangleAngle" value="notTriangle" checked>
-        <label for="notTriangle">Not a Triangle</label>
-        <input type="radio" id="acuteTriangle" name="triangleAngle" value="acuteTriangle">
-        <label for="acuteTriangle">Acute angled Triangle</label>
-        <input type="radio" id="rightTriangle" name="triangleAngle" value="rightTriangle">
-        <label for="rightTriangle">Right angled Triangle</label>
-        <input type="radio" id="obtuseTriangle" name="triangleAngle" value="obtuseTriangle">
-        <label for="obtuseTriangle">Obtuse angled Triangle</label>
-        <button class="btn-check" type="button">Check Answer</button>
-        <button class="btn-replay" type="button">Play Again</button>
-        <div class="txt-result"></div>
-    </div>
-    <hr/>
-    <!-- provided 2 angles, find the 3rd angle-->
-    <div>
-        <h3>Provided 2 angles, find the 3rd angle to form a triangle</h3>
-        <div>
-            First angle: <span class="val-angle"></span>
-            Second angle: <span class="val-angle"></span>
+        <div class="img-container">
+            <img id="quiz" class="img" src="images/quiz.svg" alt="Quiz" />
+            <div class="txt-desc">
+                <button class="btn" type="button">Take some quizes</button>
+            </div>
         </div>
-        <input id="num-find-angle" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of the 3rd angle" />
-        <button class="btn-check"  type="button">Check Answer</button>
-        <button class="btn-replay" type="button">Play Again</button>
-        <div class="txt-result"></div>
-    </div>
-    <hr/>
-    <div>
-        <h3>Type of triangle</h3>
-        <div>
-            First angle: <span class="val-angle"></span>
-            Second angle: <span class="val-angle"></span>
-            Third angle: <span class="val-angle"></span>
+    </section>
+
+        <!-- Learn about triangles -->
+        <div class="hidden div-learn">
+            <h3>Let's acquire some knowledge about Triangles</h3>
+            <p>A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A
+                triangle with vertices A, B, and C is denoted <i class="fas fa-caret-up">ABC</i>.</p>
         </div>
-        <input type="radio" id="not-triangle" name="triangleType" value="notTriangle" checked>
-        <label for="not-triangle">Not a Triangle</label>
-        <input type="radio" id="equilateral" name="triangleType" value="equilateral">
-        <label for="equilateral">Equilateral Triangle</label>
-        <input type="radio" id="isosceles" name="triangleType" value="isosceles">
-        <label for="isosceles">Isosceles Triangle</label>
-        <input type="radio" id="scalene" name="triangleType" value="scalene">
-        <label for="scalene">Scalene Triangle</label>
-        <button class="btn-check" type="button">Check Answer</button>
-        <button class="btn-replay" type="button">Play Again</button>
-        <div class="txt-result"></div>
-    </div>
-    <hr/>
-    <!-- <span>a </span><svg width="100" height="100">
-        <polygon points="0, 0, 100, 100, 0, 100" fill="black" />
-    </svg> -->
-    <!-- Find the hypotenuse -->
-    <div>
-        <h3>Calculate the length of hypotenuse</h3>
-        <input class="base" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of base"/>
-        <input class="height" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of height"/>
-        <button class="btn-calculate" type="button">Calculate</button>
-        <div class="txt-result"></div>
-    </div>
-    <hr/>
-    <!-- Find the area -->
-    <div>
-        <h3>Calculate the area of triangle</h3>
-        <input class="base" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of base"/>
-        <input class="height" type="number" step="1" min="0" oninput="validity.valid||(value='');" placeholder="Value of height"/>
-        <button class="btn-calculate" type="button">Calculate</button>
-        <div class="txt-result"></div>
-    </div>
+        <hr />
+        <hr />
+        <hr />
+
+        <!-- Quiz about triangle-->
+        <div class="hidden div-quiz">
+            <ul>
+                <li>Check if the angles make a triangle</li>
+                <li>Given 3 angles, which type of triangle is it</li>
+                <li>Provided 2 angles, find the 3rd angle</li>
+                <li>Given 3 angles, which type of triangle is it</li>
+                <li>Calculating the hypotenuse</li>
+                <li>Calculating the area of triangle</li>
+            </ul>
+        </div>
+        <!-- If the angles makes a triangle-->
+        <div class="hidden  div-quiz">
+            <h3>Enter 3 values and check to see if they can be angles of a triangle</h3>
+            <input id="num-angle1" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of the angle" />
+            <input id="num-angle2" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of the angle" />
+            <input id="num-angle3" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of the angle" />
+            <button id="btn-isTriangle" type="button">Check</button>
+            <div class="txt-result"></div>
+        </div>
+        <hr />
+        <!-- Given 3 angles, guess the type of triangle - acute, right, obtuse angled triangle-->
+        <div class="hidden  div-quiz">
+            <h3>Given the below 3 angles, choose the type of triangle they would form</h3>
+            <div>
+                First angle: <span class="val-angle"></span>
+                Second angle: <span class="val-angle"></span>
+                Third angle: <span class="val-angle"></span>
+            </div>
+            <input type="radio" id="notTriangle" name="triangleAngle" value="notTriangle" checked>
+            <label for="notTriangle">Not a Triangle</label>
+            <input type="radio" id="acuteTriangle" name="triangleAngle" value="acuteTriangle">
+            <label for="acuteTriangle">Acute angled Triangle</label>
+            <input type="radio" id="rightTriangle" name="triangleAngle" value="rightTriangle">
+            <label for="rightTriangle">Right angled Triangle</label>
+            <input type="radio" id="obtuseTriangle" name="triangleAngle" value="obtuseTriangle">
+            <label for="obtuseTriangle">Obtuse angled Triangle</label>
+            <button class="btn-check" type="button">Check Answer</button>
+            <button class="btn-replay" type="button">Play Again</button>
+            <div class="txt-result"></div>
+        </div>
+        <hr />
+        <!-- provided 2 angles, find the 3rd angle-->
+        <div class="hidden div-quiz">
+            <h3>Provided 2 angles, find the 3rd angle to form a triangle</h3>
+            <div>
+                First angle: <span class="val-angle"></span>
+                Second angle: <span class="val-angle"></span>
+            </div>
+            <input id="num-find-angle" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of the 3rd angle" />
+            <button class="btn-check" type="button">Check Answer</button>
+            <button class="btn-replay" type="button">Play Again</button>
+            <div class="txt-result"></div>
+        </div>
+        <hr />
+        <!-- Given 3 angles, guess the type of triangle - equilateral, isosceles or scalene triangle-->
+        <div class="hidden div-quiz">
+            <h3>Type of triangle</h3>
+            <div>
+                First angle: <span class="val-angle"></span>
+                Second angle: <span class="val-angle"></span>
+                Third angle: <span class="val-angle"></span>
+            </div>
+            <input type="radio" id="not-triangle" name="triangleType" value="notTriangle" checked>
+            <label for="not-triangle">Not a Triangle</label>
+            <input type="radio" id="equilateral" name="triangleType" value="equilateral">
+            <label for="equilateral">Equilateral Triangle</label>
+            <input type="radio" id="isosceles" name="triangleType" value="isosceles">
+            <label for="isosceles">Isosceles Triangle</label>
+            <input type="radio" id="scalene" name="triangleType" value="scalene">
+            <label for="scalene">Scalene Triangle</label>
+            <button class="btn-check" type="button">Check Answer</button>
+            <button class="btn-replay" type="button">Play Again</button>
+            <div class="txt-result"></div>
+        </div>
+        <hr />
+        <!-- Find the hypotenuse -->
+        <div class="hidden div-quiz">
+            <h3>Calculate the length of hypotenuse</h3>
+            <input class="base" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of base" />
+            <input class="height" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of height" />
+            <button class="btn-calculate" type="button">Calculate</button>
+            <div class="txt-result"></div>
+        </div>
+        <hr />
+        <!-- Find the area -->
+        <div class="hidden div-quiz">
+            <h3>Calculate the area of triangle</h3>
+            <input class="base" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of base" />
+            <input class="height" type="number" step="1" min="0" oninput="validity.valid||(value='');"
+                placeholder="Value of height" />
+            <button class="btn-calculate" type="button">Calculate</button>
+            <div class="txt-result"></div>
+        </div>
+    <script type="text/javascript" src="scripts/page.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
 </body>
+
 </html>
