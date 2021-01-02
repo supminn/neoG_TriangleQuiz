@@ -40,27 +40,27 @@
 
         <!-- Learn about triangles -->
         <div class="hidden div-learn">
+            <hr/>
             <h3>Let's acquire some knowledge about Triangles</h3>
             <p>A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A
                 triangle with vertices A, B, and C is denoted <i class="fas fa-caret-up">ABC</i>.</p>
         </div>
-        <hr />
-        <hr />
-        <hr />
-
         <!-- Quiz about triangle-->
         <div class="hidden div-quiz">
-            <ul>
-                <li>Check if the angles make a triangle</li>
-                <li>Given 3 angles, which type of triangle is it</li>
-                <li>Provided 2 angles, find the 3rd angle</li>
-                <li>Given 3 angles, which type of triangle is it</li>
-                <li>Calculating the hypotenuse</li>
-                <li>Calculating the area of triangle</li>
+            <hr/>
+            <ul class="list-inline">
+                <li class="list-item quiz-1">Check if the angles make a triangle</li>
+                <li class="list-item quiz-2">Given 3 angles, which type of triangle is it</li>
+                <li class="list-item quiz-3">Provided 2 angles, find the 3rd angle</li>
+                <li class="list-item quiz-4">Given 3 angles, which type of triangle is it</li>
+                <li class="list-item quiz-5">Calculating the hypotenuse</li>
+                <li class="list-item quiz-6">Calculating the area of triangle</li>
             </ul>
+            <hr />
         </div>
+
         <!-- If the angles makes a triangle-->
-        <div class="hidden  div-quiz">
+        <div class="hidden quiz-1">
             <h3>Enter 3 values and check to see if they can be angles of a triangle</h3>
             <input id="num-angle1" type="number" step="1" min="0" oninput="validity.valid||(value='');"
                 placeholder="Value of the angle" />
@@ -71,9 +71,9 @@
             <button id="btn-isTriangle" type="button">Check</button>
             <div class="txt-result"></div>
         </div>
-        <hr />
+        
         <!-- Given 3 angles, guess the type of triangle - acute, right, obtuse angled triangle-->
-        <div class="hidden  div-quiz">
+        <div class="hidden quiz-2">
             <h3>Given the below 3 angles, choose the type of triangle they would form</h3>
             <div>
                 First angle: <span class="val-angle"></span>
@@ -92,9 +92,9 @@
             <button class="btn-replay" type="button">Play Again</button>
             <div class="txt-result"></div>
         </div>
-        <hr />
+        
         <!-- provided 2 angles, find the 3rd angle-->
-        <div class="hidden div-quiz">
+        <div class="hidden quiz-3">
             <h3>Provided 2 angles, find the 3rd angle to form a triangle</h3>
             <div>
                 First angle: <span class="val-angle"></span>
@@ -106,9 +106,9 @@
             <button class="btn-replay" type="button">Play Again</button>
             <div class="txt-result"></div>
         </div>
-        <hr />
+        
         <!-- Given 3 angles, guess the type of triangle - equilateral, isosceles or scalene triangle-->
-        <div class="hidden div-quiz">
+        <div class="hidden quiz-4">
             <h3>Type of triangle</h3>
             <div>
                 First angle: <span class="val-angle"></span>
@@ -127,9 +127,9 @@
             <button class="btn-replay" type="button">Play Again</button>
             <div class="txt-result"></div>
         </div>
-        <hr />
+        
         <!-- Find the hypotenuse -->
-        <div class="hidden div-quiz">
+        <div class="hidden quiz-5">
             <h3>Calculate the length of hypotenuse</h3>
             <input class="base" type="number" step="1" min="0" oninput="validity.valid||(value='');"
                 placeholder="Value of base" />
@@ -138,9 +138,9 @@
             <button class="btn-calculate" type="button">Calculate</button>
             <div class="txt-result"></div>
         </div>
-        <hr />
+        
         <!-- Find the area -->
-        <div class="hidden div-quiz">
+        <div class="hidden quiz-6">
             <h3>Calculate the area of triangle</h3>
             <input class="base" type="number" step="1" min="0" oninput="validity.valid||(value='');"
                 placeholder="Value of base" />
