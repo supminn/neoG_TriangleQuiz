@@ -1,14 +1,7 @@
 const btnChoice = document.querySelectorAll(".btn");
 const learnSection = document.querySelector(".div-learn");
 const quizOptions = document.querySelector(".div-quiz");
-// const quiz1 = document.querySelectorAll(".quiz-1");
-// const quiz2 = document.querySelectorAll(".quiz-2");
-// const quiz3 = document.querySelectorAll(".quiz-3");
-// const quiz4 = document.querySelectorAll(".quiz-4");
-// const quiz5 = document.querySelectorAll(".quiz-5");
-// const quiz6 = document.querySelectorAll(".quiz-6");
 
-// const quizes = [quiz1,quiz2,quiz3,quiz4,quiz5,quiz6];
 //Array containing all the 6 quizes
 const quizes = [
     document.querySelectorAll(".quiz-1"),
@@ -36,14 +29,17 @@ for(let i = 0;i<6;i++){
 
 //Learning
 btnChoice[0].addEventListener("click",() => {
-    console.log(btnChoice[0].innerText);
     learnSection.classList.remove("hidden");
     quizOptions.classList.add("hidden");
+    quizes.map(quizActive => {
+        if(quizActive[1].classList.length == 2){
+            console.log(quizActive[1].classList.add('hidden'));
+        }
+    })
 })
 
 //Quiz
 btnChoice[1].addEventListener("click",() => {
-    console.log(btnChoice[1].innerText);
     learnSection.classList.add("hidden");
     quizOptions.classList.remove("hidden");
 })

@@ -50,7 +50,7 @@ btnTriangle.addEventListener("click", function () {
     if (!angle1.value || !angle2.value || !angle3.value) {
         result[0].innerHTML = "<i>Values cannot be left blank</i>. Enter all the 3 angles.";
     }
-    if (Number(angle1.value) + Number(angle2.value) + Number(angle3.value) === 180) {
+    else if (Number(angle1.value) + Number(angle2.value) + Number(angle3.value) === 180) {
         result[0].innerHTML = `<i class="far fa-check-circle"></i>The 3 angles with values ${angle1.value}°, ${angle2.value}° and ${angle3.value}° would <b>make a triangle</b>`;
     } else {
         result[0].innerHTML = `<i class="far fa-times-circle"></i>The 3 angles with values ${angle1.value}°, ${angle2.value}° and ${angle3.value}° would <b>not make a triangle</b>`;
