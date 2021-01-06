@@ -40,15 +40,55 @@
     <div class="content">
         <!-- Learn about triangles -->
         <div class="hidden div-learn">
-            <hr/>
+            <hr />
             <h3>Let's acquire some knowledge about Triangles</h3>
             <p>A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry. A
                 triangle with vertices A, B, and C is denoted <i class="fas fa-caret-up">ABC</i>.</p>
+            <p>In Euclidean geometry, any three points, when non-collinear, determine a unique triangle.</p>
+            <div class="txt-triangle-content">
+                <img class="img-triangle" src="images/triangle.png" src="labelled triangle">
+                <div class="txt-triangle-desc">
+                    <p>In this example, there are 3 non-linear points named A, B and C which are the vertices of <i
+                            class="fas fa-caret-up">ABC</i>. Triangles have 3 edges named AB, BC and CA respectively.
+                        The naming can be interchangeable i.e. an edge AB could also be referred as edge BA. In this
+                        example, we observe that the dimensions of this triangle are:-</p>
+                    <ul>
+                        <li> AB = 3.27 units</li>
+                        <li> BC = 4.74 units</li>
+                        <li> CA = 4.48 units</li>
+                    </ul>
+                    <p>Each triangle comprises of 3 angles. They are referred as follows:-</p>
+                    <ul>
+                        <li> <svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>ABC or<svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>CBA or<svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>B = 65°</li>
+                        <li> <svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>BCA or<svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>ACB or<svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>C = 41.38°</li>
+                        <li> <svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>CAB or<svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>BAC or<svg width="22" height="22">
+                                <polygon points="25, 0, 30, 30, 0, 30" />
+                            </svg>A = 73.62°</li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
 
         <!-- Quizes about triangle-->
         <div class="hidden div-quiz">
-            <hr/>
+            <hr />
             <ul class="list-inline">
                 <li class="list-item quiz-1">Is it a triangle</li>
                 <li class="list-item quiz-2">Type of triangle - angled</li>
@@ -72,7 +112,7 @@
             <button id="btn-isTriangle" type="button">Check</button>
             <div class="txt-result"></div>
         </div>
-        
+
         <!-- Given 3 angles, guess the type of triangle - acute, right, obtuse angled triangle-->
         <div class="hidden quiz-sec quiz-2">
             <h3>Given the below 3 angles, choose the type of triangle they would form</h3>
@@ -93,7 +133,7 @@
             <button class="btn-replay" type="button">Play Again</button>
             <div class="txt-result"></div>
         </div>
-        
+
         <!-- provided 2 angles, find the 3rd angle-->
         <div class="hidden quiz-sec quiz-3">
             <h3>Provided 2 angles, find the 3rd angle to form a triangle</h3>
@@ -107,7 +147,7 @@
             <button class="btn-replay" type="button">Play Again</button>
             <div class="txt-result"></div>
         </div>
-        
+
         <!-- Given 3 angles, guess the type of triangle - equilateral, isosceles or scalene triangle-->
         <div class="hidden quiz-sec quiz-4">
             <h3>Type of triangle</h3>
@@ -128,7 +168,7 @@
             <button class="btn-replay" type="button">Play Again</button>
             <div class="txt-result"></div>
         </div>
-        
+
         <!-- Find the hypotenuse -->
         <div class="hidden quiz-sec quiz-5">
             <h3>Calculate the length of hypotenuse</h3>
@@ -139,7 +179,7 @@
             <button class="btn-calculate" type="button">Calculate</button>
             <div class="txt-result"></div>
         </div>
-        
+
         <!-- Find the area -->
         <div class="hidden quiz-sec quiz-6">
             <h3>Calculate the area of triangle</h3>
@@ -150,18 +190,18 @@
             <button class="btn-calculate" type="button">Calculate</button>
             <div class="txt-result"></div>
         </div>
-        </div>
-        <footer>
-            <span>
-                <a href="https://supminn-neog.netlify.app/" target="_blank" rel="noreferrer"><img class="social-media" src="images/user.svg"
-                        width="30" alt="Portfolio"></img></a>
-                <a href="https://github.com/supminn/" target="_blank" rel="noreferrer"><img class="social-media" src="images/github.svg"
-                        width="30" alt="Github"></img></a>
-                <a href="https://twitter.com/supminn" target="_blank" rel="noreferrer"><img class="social-media" src="images/twitter.svg"
-                        width="30" alt="Twitter"></img></a>
-            </span>
-            <p>Copyright © 2020 SupTECH </p>
-          </footer>
+    </div>
+    <footer>
+        <span>
+            <a href="https://supminn-neog.netlify.app/" target="_blank" rel="noreferrer"><img class="social-media"
+                    src="images/user.svg" width="30" alt="Portfolio"></img></a>
+            <a href="https://github.com/supminn/" target="_blank" rel="noreferrer"><img class="social-media"
+                    src="images/github.svg" width="30" alt="Github"></img></a>
+            <a href="https://twitter.com/supminn" target="_blank" rel="noreferrer"><img class="social-media"
+                    src="images/twitter.svg" width="30" alt="Twitter"></img></a>
+        </span>
+        <p>Copyright © 2020 SupTECH </p>
+    </footer>
     <script type="text/javascript" src="scripts/page.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
 </body>
